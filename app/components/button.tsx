@@ -11,7 +11,7 @@ type ButtonProps = {
     children,
     href,
   }: ButtonProps) {
-    const baseStyle = "inline-flex items-center justify-center px-4 py-2 rounded-lg font-light focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition";
+    const baseStyle = "inline-block items-center justify-center px-4 py-2 rounded-lg font-light focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition";
   
     const variants = {
       primary: "bg-[#2A6EF5] text-white hover:bg-blue-600 focus-visible:ring-blue-500",
