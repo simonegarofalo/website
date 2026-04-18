@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding-inline: calc(1 / 12 * 100vw);
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-inline: 1rem;
+  }
+}
