@@ -13,7 +13,7 @@ const baseClasses = "flex items-center justify-center px-8 py-2 rounded-full bor
 
 export default function Technologies() {
   return (
-    <div className="w-full bg-[#F4F8FF] my-20">
+    <div className="w-full bg-[#F4F8FF] mt-20">
       <SectionHeader
         label="LE TECNOLOGIE"
         title="Tecnologie solide per risultati concreti"
