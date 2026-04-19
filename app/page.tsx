@@ -3,6 +3,7 @@ import Stats from "./components/stats";
 import Services from "./components/services";
 import Technologies from "./components/technologies";
 import Workflow from "./components/workflow";
+import Faq from "./components/faq";
 
 export default function Home() {
 
@@ -14,6 +15,7 @@ export default function Home() {
     <Services />
     <Technologies />
     <Workflow />
+    <Faq />
     </>
   );
 }

@@ -1,7 +1,7 @@
 'use client'
 
 type TabProps = {
-  number: string;
+  number?: string;
   title: string;
   description: string;
   isOpen: boolean;
@@ -15,7 +15,7 @@ export default function Tab({ number, title, description, isOpen, onToggle }: Ta
         className="flex items-center gap-6 cursor-pointer"
         onClick={onToggle}
       >
-        <span className="text-2xl">{number}.</span>
+        {number && <span className="text-2xl">{number}.</span>}
         <span className={`text-2xl flex-1 transition-colors duration-300 ${isOpen ? "text-[#2A6EF5]" : "text-gray-800"}`}>
           {title}
         </span>
@@ -25,7 +25,7 @@ export default function Tab({ number, title, description, isOpen, onToggle }: Ta
       </div>
       <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
         <div className="overflow-hidden">
-          <p className="mt-6 ml-14 text-gray-700">{description}</p>
+          <p className="mt-6  text-gray-700">{description}</p>
         </div>
       </div>
     </div>
