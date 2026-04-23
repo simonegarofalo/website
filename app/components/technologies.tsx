@@ -13,13 +13,13 @@ const baseClasses = "flex items-center justify-center px-8 py-2 rounded-full bor
 
 export default function Technologies() {
   return (
-    <div className="w-full bg-[#F4F8FF] mt-20">
+    <div className="w-full bg-[#F4F8FF] mt-10">
       <SectionHeader
         label="LE TECNOLOGIE"
         title="Tecnologie solide per risultati concreti"
         description="Strumenti e tecnologie affidabili per sviluppare prodotti performanti, scalabili e facili da gestire. Scelte prese in base alle reali esigenze del progetto, con un focus su performace, SEO e semplicità di manutenzione."
       />
-      <div className="flex flex-wrap gap-4 px-8 md:px-20 mt-4 mb-20">
+      <div className="flex flex-wrap gap-4 px-4 md:px-20 mt-4 mb-10 md:mb-20">
         {technologies.map((t) => (
           <div
             key={t.label}

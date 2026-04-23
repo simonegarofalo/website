@@ -3,7 +3,7 @@ import Button from "./button";
 export default function Hero() {
 
   return (
-    <div className="px-8 md:px-20 mt-20">
+    <div className="px-4 md:px-20 mt-10 md:mt-20 md:mb-10">
         <div className="hero-message flex items-center gap-2 mb-4">
             <div className="available-icon w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
             <div className="message-text text-xs sm:text-base">
