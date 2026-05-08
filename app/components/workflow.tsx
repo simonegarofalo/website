@@ -10,7 +10,7 @@ export default function Workflow() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full mb-10">
+    <div className="w-full mb-10 md:mb-20">
       <SectionHeader
         label="COME LAVORO"
         title="Semplice, trasparente, efficace"

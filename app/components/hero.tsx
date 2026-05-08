@@ -1,4 +1,5 @@
 import Button from "./button";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
 
@@ -11,7 +12,7 @@ export default function Hero() {
             </div>
         </div>
         <div className="hero-content pb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold mb-2">Il tuo sito web<br />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-2">Il tuo sito web<br />
             <span className="text-[#2A6EF5]"> funziona davvero?</span>
             </h1>
             <p className="sm:max-w-[55%]">Sviluppo e ottimizzo siti web e e-commerce con WordPress, Shopify e  React.<br /> 
@@ -21,11 +22,11 @@ export default function Hero() {
             </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-2 max-w-fit">
-            <Button variant="primary" href="#">
-            Raccontami il tuo progetto
+            <Button variant="primary" href="#pricing">
+            Scegli un servizio
             </Button>
-            <Button variant="secondary" href="#">
-                Scopri di più
+            <Button variant="secondary" href="#services">
+                Scopri di più <ArrowRight size={16} />
             </Button>
         </div>
     </div>

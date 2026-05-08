@@ -1,5 +1,8 @@
 import SectionHeader from "./SectionHeader";
 import Button from "./button";
+import { Send } from "lucide-react"
+import { Calendar } from "lucide-react"
+
 
 export default function PreFooter() {
   return (
@@ -11,13 +14,13 @@ export default function PreFooter() {
       />
       <div className="flex flex-col sm:flex-row gap-2 max-w-fit pt-6">
       <Button variant="primary" href="#">
-            Scrivimi ora
+            Scrivimi ora <Send size={16} />
             </Button>
             <Button variant="secondary" href="#">
-                Prenota una chiamata
+                Prenota una chiamata <Calendar size={18} />
             </Button>
             </div>
-            <div className="message-text text-xs sm:text-base pt-4 px-4 mb-10 md:mb-20">
+            <div className="message-text text-xs sm:text-sm pt-4 px-4 mb-10 md:mb-20">
                 <p>Rispondo entro 24 ore · Disponibile su WhatsApp, email e videocall</p>
             </div>
     </div>

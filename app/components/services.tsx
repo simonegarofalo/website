@@ -14,7 +14,7 @@ export default function Services() {
     ? services
     : services.filter((s) => s.tag === active);
     return (
-        <div className="w-full md:mb-12">
+        <div id="services" className="w-full md:mb-12">
           <SectionHeader
             label="COSA FACCIO"
             title="Interventi e sviluppo su misura"

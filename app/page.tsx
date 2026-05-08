@@ -5,6 +5,7 @@ import Technologies from "./components/technologies";
 import Workflow from "./components/workflow";
 import Faq from "./components/faq";
 import PreFooter from "./components/preFooter";
+import Pricing from "./components/pricing";
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
     <Services />
     <Technologies />
     <Workflow />
+    <Pricing />
     <Faq />
     <PreFooter />
     </>
