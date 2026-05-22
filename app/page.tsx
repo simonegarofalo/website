@@ -6,12 +6,15 @@ import Workflow from "./components/workflow";
 import Faq from "./components/faq";
 import PreFooter from "./components/preFooter";
 import Pricing from "./components/pricing";
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
 
 export default function Home() {
 
   
   return (
     <>
+    <Navbar />
     <Hero />
     <Stats />
     <Services />
@@ -20,6 +23,7 @@ export default function Home() {
     <Pricing />
     <Faq />
     <PreFooter />
+    <Footer />
     </>
   );
 }

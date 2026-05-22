@@ -4,8 +4,9 @@ import { pricing } from "../data/pricing";
 
 export default function Pricing() {
   return (
-    <div id="pricing" className="w-full mb-10 md:mb-20">
+    <div className="w-full mb-10 md:mb-20">
       <SectionHeader
+      id="pricing"
         label="PREZZI"
         title="Piani chiari, nessuna sorpresa"
         description="Per interventi ricorrenti o progetti one shot: scegli la formula più adatta."

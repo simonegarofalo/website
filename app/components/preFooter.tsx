@@ -8,12 +8,13 @@ export default function PreFooter() {
   return (
     <div className="w-full flex flex-col items-center bg-[#F4F8FF] mt-10 md:mt-20 text-center">
       <SectionHeader
+      id="prefooter"
         label="SENTIAMOCI"
         title="Hai in mente un progetto?"
         description="Raccontami la tua idea. La prima chiamata è sempre gratuita e senza impegno."
       />
       <div className="flex flex-col sm:flex-row gap-2 max-w-fit pt-6">
-      <Button variant="primary" href="#">
+      <Button variant="primary" href="mailto:simonegarofalo96@gmail.com">
             Scrivimi ora <Send size={16} />
             </Button>
             <Button variant="secondary" href="#">

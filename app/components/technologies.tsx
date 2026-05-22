@@ -15,6 +15,7 @@ export default function Technologies() {
   return (
     <div className="w-full bg-[#F4F8FF] mt-10">
       <SectionHeader
+      id="technologies"
         label="LE TECNOLOGIE"
         title="Tecnologie solide per risultati concreti"
         description="Strumenti e tecnologie affidabili per sviluppare prodotti performanti, scalabili e facili da gestire. Scelte prese in base alle reali esigenze del progetto, con un focus su performace, SEO e semplicità di manutenzione."

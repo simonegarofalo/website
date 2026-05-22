@@ -14,8 +14,9 @@ export default function Services() {
     ? services
     : services.filter((s) => s.tag === active);
     return (
-        <div id="services" className="w-full md:mb-12">
+        <div className="w-full md:mb-12">
           <SectionHeader
+          id="services"
             label="COSA FACCIO"
             title="Interventi e sviluppo su misura"
             description="Dal bug fix urgente al sito costruito da zero. Lavoro su due fronti: manutenzione di siti attivi e sviluppo di nuovi progetti."

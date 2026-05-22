@@ -12,6 +12,7 @@ export default function Faq() {
     return(
         <>
         <SectionHeader
+        id="faq"
       label="FAQ"
       title="Domande frequenti"
       description=""

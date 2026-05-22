@@ -12,6 +12,7 @@ export default function Workflow() {
   return (
     <div className="w-full mb-10 md:mb-20">
       <SectionHeader
+      id="workflow"
         label="COME LAVORO"
         title="Semplice, trasparente, efficace"
         description="Nessun processo burocratico. Solo passaggi chiari da quando mi contatti a quando il progetto è online."
