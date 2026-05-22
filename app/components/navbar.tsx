@@ -149,7 +149,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Button
               variant="primary"
-              href="mailto:simonegarofalo96@gmail.com"
+              href="mailto:simonegarofalo.dev@gmail.com"
             >
               Contattami
               <Send size={15} />
@@ -214,7 +214,7 @@ export default function Navbar() {
 
             <Button
               variant="primary"
-              href="mailto:simonegarofalo96@gmail.com"
+              href="mailto:simonegarofalo.dev@gmail.com"
             >
               Scrivimi ora
               <Send size={15} />

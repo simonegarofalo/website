@@ -14,10 +14,10 @@ export default function PreFooter() {
         description="Raccontami la tua idea. La prima chiamata è sempre gratuita e senza impegno."
       />
       <div className="flex flex-col sm:flex-row gap-2 max-w-fit pt-6">
-      <Button variant="primary" href="mailto:simonegarofalo96@gmail.com">
+      <Button variant="primary" href="mailto:simonegarofalo.dev@gmail.com">
             Scrivimi ora <Send size={16} />
             </Button>
-            <Button variant="secondary" href="#">
+            <Button variant="secondary" href="https://cal.com/simone-garofalo-hfafh3/15min">
                 Prenota una chiamata <Calendar size={18} />
             </Button>
             </div>
