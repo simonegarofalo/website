@@ -8,10 +8,11 @@ import PreFooter from "./components/preFooter";
 import Pricing from "./components/pricing";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
+import WhatsAppBox from "./components/whatsapp-box";
 
 export default function Home() {
 
-  
+
   return (
     <>
     <Navbar />
@@ -24,6 +25,7 @@ export default function Home() {
     <Faq />
     <PreFooter />
     <Footer />
+    <WhatsAppBox />
     </>
   );
 }
