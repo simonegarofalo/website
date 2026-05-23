@@ -20,6 +20,10 @@ body {
   line-height: 22px;
 }
 
-.section {
-  scroll-margin-top: 100px;
+#workflow,
+#services,
+#pricing,
+#faq,
+#prefooter {
+  scroll-margin-top: 100px !important;
 }
