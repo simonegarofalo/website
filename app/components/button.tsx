@@ -3,13 +3,17 @@ import Link from "next/link";
 type ButtonProps = {
     variant?: "primary" | "secondary";
     children: React.ReactNode;
-    href: string;  
+    href: string;
+    target?: string;
+    rel?: string;
 };
   
   export default function Button({
     variant = "primary",
     children,
     href,
+    target,
+    rel,
   }: ButtonProps) {
     const baseStyle = "flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-light focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition";
   
@@ -19,7 +23,7 @@ type ButtonProps = {
     };
   
     return (
-        <Link href={href} className={`${baseStyle} ${variants[variant]}`}>
+        <Link href={href} target={target} rel={rel} className={`${baseStyle} ${variants[variant]}`}>
         {children}
       </Link>
     );

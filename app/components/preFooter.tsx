@@ -1,8 +1,8 @@
+'use client';
 import SectionHeader from "./SectionHeader";
 import Button from "./button";
 import { Send } from "lucide-react"
-import { Calendar } from "lucide-react"
-
+import { Calendar as CalendarIcon } from "lucide-react"
 
 export default function PreFooter() {
   return (
@@ -17,8 +17,8 @@ export default function PreFooter() {
       <Button variant="primary" href="mailto:simonegarofalo.dev@gmail.com">
             Scrivimi ora <Send size={16} />
             </Button>
-            <Button variant="secondary" href="https://cal.com/simone-garofalo-hfafh3/15min">
-                Prenota una chiamata <Calendar size={18} />
+            <Button variant="secondary" href="https://cal.com/simone-garofalo-hfafh3/conosciamoci" target="_blank">
+                Prenota una chiamata <CalendarIcon size={18} />
             </Button>
             </div>
             <div className="message-text text-xs sm:text-sm pt-4 px-4 mb-10 md:mb-20">
