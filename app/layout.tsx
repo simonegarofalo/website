@@ -5,7 +5,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Simone Garofalo",
-  url: "https://www.simonegarofalo.dev",
+  url: "https://www.simonegarofalo.xyz",
   jobTitle: "Web Developer",
   description: "Sviluppo e manutenzione siti web e e-commerce",
   knowsAbout: ["WordPress", "Shopify", "React", "Next.js", "SEO"],
@@ -16,16 +16,16 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.simonegarofalo.dev"),
+  metadataBase: new URL("https://www.simonegarofalo.xyz"),
   title: "Simone Garofalo | Sviluppo e manutenzione di siti web e e-commerce",
   description: "Sviluppo e ottimizzo siti web e e-commerce con WordPress, Shopify e React. Interventi mirati, risultati misurabili. Senza agenzie, senza intermediari.",
   alternates: {
-    canonical: "https://www.simonegarofalo.dev",
+    canonical: "https://www.simonegarofalo.xyz",
   },
   openGraph: {
     title: "Simone Garofalo | Sviluppo e manutenzione web",
     description: "Interventi mirati, risultati misurabili. Senza agenzie, senza intermediari.",
-    url: "https://www.simonegarofalo.dev",
+    url: "https://www.simonegarofalo.xyz",
     siteName: "Simone Garofalo",
     locale: "it_IT",
     type: "website",
