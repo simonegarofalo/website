@@ -101,7 +101,7 @@ export default function PricingCard({
 
 function ctaClass(variant: "primary" | "secondary") {
   const base =
-    "w-full rounded-xl py-3 text-center text-sm font-medium transition-all duration-200 block";
+    "w-full rounded-xl py-3 text-center transition-all duration-200 block";
   const variants = {
     primary: "bg-[#2A6EF5] text-white hover:bg-[#1a5edf]",
     secondary:

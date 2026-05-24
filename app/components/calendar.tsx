@@ -35,7 +35,7 @@ export default function Calendar({ variant, buttonLabel, buttonVariant = "primar
     return () => { cancelled = true; };
   }, [variant]);
 
-  const base = "flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-light cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition";
+  const base = "flex items-start justify-center gap-2 px-4 py-2 rounded-lg font-light cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition";
 
   const styles = {
     primary: "bg-[#2A6EF5] text-white hover:bg-blue-600 focus-visible:ring-blue-500",

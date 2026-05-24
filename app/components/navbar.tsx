@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import Calendar from "./calendar";
-import { Calendar as CalendarIcon } from "lucide-react"
-
+import { Calendar as CalendarIcon } from "lucide-react";
+import Image from "next/image";
 
 const links = [
   { label: "Servizi", href: "#services" },
@@ -65,9 +65,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full transition-transform duration-500 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed top-0 left-0 z-50 w-full transition-transform duration-500 ${visible ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
       <nav className="mx-auto mt-4 flex w-full max-w-7xl flex-col rounded-2xl border border-white/10 bg-white/70 shadow-[0_8px_30px_rgba(0,0,0,0.06)] backdrop-blur-xl md:w-[70%] lg:w-[60%]">
 
@@ -82,9 +81,15 @@ export default function Navbar() {
               window.scrollTo({ top: 0, behavior: "smooth" });
               setActiveHref("");
             }}
-            className="md:hidden xl:block text-base"
+            className="block md:hidden xl:block flex items-center"
           >
-            <span className="text-[#2A6EF5] font-medium text-lg">{"< / > "}</span>
+            <Image
+              src="/assets/logo-desktop.svg"
+              alt="Logo Simone Garofalo - Sviluppo, Manutenzione, Web"
+              width={150}
+              height={32}
+              priority
+            />
           </a>
 
           {/* DESKTOP NAV */}
@@ -94,17 +99,15 @@ export default function Navbar() {
                 <a
                   href={l.href}
                   onClick={(e) => handleNavClick(e, l.href)}
-                  className={`relative text-sm transition-colors duration-300 ${
-                    activeHref === l.href
+                  className={`relative text-sm transition-colors duration-300 ${activeHref === l.href
                       ? "text-black"
                       : "text-neutral-500 hover:text-black"
-                  }`}
+                    }`}
                 >
                   {l.label}
                   <span
-                    className={`absolute -bottom-2 left-0 h-[2px] rounded-full bg-[#2A6EF5] transition-all duration-300 ${
-                      activeHref === l.href ? "w-full" : "w-0"
-                    }`}
+                    className={`absolute -bottom-2 left-0 h-[2px] rounded-full bg-[#2A6EF5] transition-all duration-300 ${activeHref === l.href ? "w-full" : "w-0"
+                      }`}
                   />
                 </a>
               </li>
@@ -131,15 +134,13 @@ export default function Navbar() {
             <div className="relative h-5 w-5">
               <Menu
                 size={22}
-                className={`absolute inset-0 transition-all duration-300 ${
-                  isOpen ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
-                }`}
+                className={`absolute inset-0 transition-all duration-300 ${isOpen ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
+                  }`}
               />
               <X
                 size={22}
-                className={`absolute inset-0 transition-all duration-300 ${
-                  isOpen ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"
-                }`}
+                className={`absolute inset-0 transition-all duration-300 ${isOpen ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"
+                  }`}
               />
             </div>
           </button>
@@ -147,9 +148,8 @@ export default function Navbar() {
 
         {/* MOBILE MENU */}
         <div
-          className={`overflow-hidden transition-all duration-500 md:hidden ${
-            isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`overflow-hidden transition-all duration-500 md:hidden ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="flex flex-col gap-6 border-t border-black/5 px-6 py-6">
             {links.map((l) => (
@@ -157,9 +157,8 @@ export default function Navbar() {
                 key={l.label}
                 href={l.href}
                 onClick={(e) => handleNavClick(e, l.href)}
-                className={`text-sm transition-colors ${
-                  activeHref === l.href ? "text-black" : "text-neutral-500"
-                }`}
+                className={`text-sm transition-colors ${activeHref === l.href ? "text-black" : "text-neutral-500"
+                  }`}
               >
                 {l.label}
               </a>
