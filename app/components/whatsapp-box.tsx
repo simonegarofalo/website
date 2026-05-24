@@ -33,63 +33,67 @@ export default function WhatsAppBox() {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 transition-all duration-500 ${
-        isVisible
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-4 pointer-events-none"
+      className={`pointer-events-none fixed bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end gap-3 transition-all duration-500 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      {/* Panel */}
+      {/* Panel — invisible rimuove l'intero sottoalbero dall'hit-testing tree */}
       <div
-        className={`w-72 bg-white rounded-2xl border border-gray-100 shadow-xl overflow-hidden transition-all duration-300 origin-bottom-right ${
+        className={`transition-all duration-300 origin-bottom-right ${
           isOpen
-            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 scale-95 translate-y-2 pointer-events-none"
+            ? "visible pointer-events-auto opacity-100 scale-100 translate-y-0"
+            : "invisible pointer-events-none opacity-0 scale-95 translate-y-2"
         }`}
         aria-hidden={!isOpen}
+        role="dialog"
+        aria-label="Contatta su WhatsApp"
       >
-        {/* Header */}
-        <div className="bg-[#25D366] px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+        <div className="w-64 sm:w-72 bg-white rounded-2xl border border-gray-100 shadow-xl overflow-hidden">
+
+          {/* Header */}
+          <div className="bg-[#25D366] px-4 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                <WhatsAppIcon size={20} />
+              </div>
+              <div>
+                <p className="text-white text-sm font-semibold leading-tight">Simone</p>
+                <p className="text-white/80 text-xs font-light">Rispondo entro 24h</p>
+              </div>
+            </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              aria-label="Chiudi pannello WhatsApp"
+              className="text-white/80 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10 min-w-[32px] min-h-[32px] flex items-center justify-center"
+            >
+              <X size={16} />
+            </button>
+          </div>
+
+          {/* Chat preview */}
+          <div className="px-4 py-4 bg-[#ECE5DD]">
+            <div className="bg-white rounded-lg rounded-tl-none px-3 py-2 shadow-sm max-w-[88%]">
+              <p className="text-gray-800 text-sm font-light leading-snug">
+                Ciao! 👋🏼 Come posso aiutarti con il tuo sito web?
+              </p>
+              <p className="text-gray-400 text-[10px] text-right mt-1">adesso</p>
+            </div>
+          </div>
+
+          {/* Footer CTA */}
+          <div className="px-4 py-3 bg-white border-t border-gray-100">
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Apri conversazione su WhatsApp"
+              className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20b85a] text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-colors min-h-[44px]"
+            >
               <WhatsAppIcon size={20} />
-            </div>
-            <div>
-              <p className="text-white text-sm font-semibold leading-tight">Simone</p>
-              <p className="text-white/80 text-xs font-light">Rispondo entro 24h</p>
-            </div>
+              Inizia la chat
+            </a>
           </div>
-          <button
-            onClick={() => setIsOpen(false)}
-            aria-label="Chiudi pannello WhatsApp"
-            className="text-white/80 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10"
-          >
-            <X size={16} />
-          </button>
-        </div>
 
-        {/* Chat preview */}
-        <div className="px-4 py-4 bg-[#ECE5DD]">
-          <div className="bg-white rounded-lg rounded-tl-none px-3 py-2 shadow-sm max-w-[88%]">
-            <p className="text-gray-800 text-sm font-light leading-snug">
-              Ciao! 👋🏼 Come posso aiutarti con il tuo sito web?
-            </p>
-            <p className="text-gray-400 text-[10px] text-right mt-1">adesso</p>
-          </div>
-        </div>
-
-        {/* Footer CTA */}
-        <div className="px-4 py-3 bg-white border-t border-gray-100">
-          <a
-            href={WA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Apri conversazione su WhatsApp"
-            className="flex items-end justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20b85a] text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-colors"
-          >
-            <WhatsAppIcon size={24} />
-            Inizia la chat
-          </a>
         </div>
       </div>
 
@@ -98,7 +102,7 @@ export default function WhatsAppBox() {
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? "Chiudi WhatsApp" : "Contattami su WhatsApp"}
         aria-expanded={isOpen}
-        className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20b85a] text-white shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+        className="pointer-events-auto w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20b85a] text-white shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center shrink-0"
       >
         <span
           className={`transition-transform duration-200 ${
